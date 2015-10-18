@@ -1,52 +1,46 @@
 <!DOCTYPE HTML>
-<html ng-app="store">
+<html ng-app="website">
 	<head>
 		<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 	</head>
-	<body ng-controller="StoreController as store">
-	<div ng-repeat="product in store.products">
-		<section ng-controller="PanelController as panel">
-			<ul class="nav nav-pills">
-				<li ng-class="{active:panel.isSelected(1)}"> 
-					<a href ng-click="panel.setTab(1)">Name</a>
-				</li>
-				<li ng-class="{active:panel.isSelected(2)}"}>
-					<a href ng-click="panel.setTab(2)">Price</a>
-				</li>
-				<li ng-class="{active:panel.isSelected(3)}">
-					<a href ng-click="panel.setTab(3)">Description</a>
-				</li>
-			</ul>
-			<div class="panel" ng-show="panel.isSelected(1)">
-				<h4>Name</h4>
-				<p>{{product.name}}</p>
-			</div>
-			<div class="panel" ng-show="panel.isSelected(2)">
-				<h4>Price</h4>
-				<p>{{product.price | currency}}</p>
-			</div>
-			<div class="panel" ng-show="panel.isSelected(3)">
-				<h4>Description</h4>
-				<p>{{product.description}}</p>
-			</div>
-			<button ng-show="store.product.canPurchase"> Add to Cart
-			</button>
-		</section>
-	</div>
+	<body ng-controller="mainController">
+		 <!-- HEADER AND NAVBAR -->
+        <header>
+            <nav class="navbar navbar-default" >
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Hello Yes it is Murph</a>
+                </div>
 
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-		<script type="text/javascript" src="js/app.js"></script>
-		<!--
+           <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+        	
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+            <div ng-view></div>
+           
+        </div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		 Latest compiled and minified JavaScript 
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		-->
+		
 	</body>
 </html>
