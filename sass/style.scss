@@ -1,3 +1,13 @@
+@import 'colors';
+
 .h{
 	padding-top: 0px!important;
+	background: none;
+}
+
+.nav-colors{
+	background: $mintgreen;
+}
+a:hover{
+	color:$forestgreen !important;
 }
