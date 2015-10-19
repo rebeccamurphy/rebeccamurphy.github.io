@@ -1,13 +1,21 @@
 @import 'colors';
 
-.h{
+._title{
 	padding-top: 0px!important;
 	background: none;
+	font-weight:bold;
 }
 
-.nav-colors{
+._nav-colors{
 	background: $mintgreen;
 }
 a:hover{
 	color:$forestgreen !important;
+}
+body{
+	background-color:$lightgray;
+}
+.paragraph-bio{
+	padding-bottom:25px;
+	font-size:20px;
 }

@@ -68,17 +68,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 3, ../sass/style.scss */
-.h {
+._title {
   padding-top: 0px !important;
   background: none;
+  font-weight: bold;
 }
 
-/* line 8, ../sass/style.scss */
-.nav-colors {
+/* line 9, ../sass/style.scss */
+._nav-colors {
   background: #93C573;
 }
 
-/* line 11, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 a:hover {
   color: #2D6707 !important;
+}
+
+/* line 15, ../sass/style.scss */
+body {
+  background-color: #EDF2EA;
+}
+
+/* line 18, ../sass/style.scss */
+.paragraph-bio {
+  padding-bottom: 25px;
+  font-size: 20px;
 }
