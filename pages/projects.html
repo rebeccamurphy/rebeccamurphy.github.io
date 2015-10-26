@@ -2,25 +2,10 @@
 <div class="jumbotron text-center _title">
     <h1>Projects</h1>
     <div class="container">
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
+    <div class="row" ng-repeat="row in projects">
+        <div class="col-md-3 portfolio-item" ng-repeat="project in row" >
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <img class="img-responsive" src={{project.img}} alt={{project.name}}>
             </a>
         </div>
     </div>
