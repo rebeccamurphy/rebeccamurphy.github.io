@@ -12,6 +12,12 @@
 a:hover{
 	color:$forestgreen !important;
 }
+ div.navbar-header a, ul.nav a{
+	color:$lightgray !important;
+	&:hover{
+		color:$forestgreen !important;
+	}
+}
 body{
 	background-color:$lightgray;
 }

@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('website',['ngRoute', 'resume']);
+	var app = angular.module('website',['ngRoute', 'resume', 'projects']);
 
 	app.controller('mainController', function($scope){
 		$scope.message ="main page";
@@ -22,9 +22,7 @@
     app.controller('contactController', function($scope) {
         $scope.message = 'Contact us! JK. This is just a demo.';
     });
-    app.controller('projectsController', function($scope) {
-        $scope.message = 'projects';
-    });
+    
     
 	// configure our routes
     app.config(function($routeProvider) {

@@ -85,11 +85,20 @@ a:hover {
 }
 
 /* line 15, ../sass/style.scss */
+div.navbar-header a, ul.nav a {
+  color: #EDF2EA !important;
+}
+/* line 17, ../sass/style.scss */
+div.navbar-header a:hover, ul.nav a:hover {
+  color: #2D6707 !important;
+}
+
+/* line 21, ../sass/style.scss */
 body {
   background-color: #EDF2EA;
 }
 
-/* line 18, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 .paragraph-bio {
   padding-bottom: 25px;
   font-size: 20px;
